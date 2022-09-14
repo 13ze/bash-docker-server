@@ -19,6 +19,12 @@ if [[ "$os" == "ubuntu" && "$os_version" -lt 2004 ]]; then
   exit
 fi      
 
+
+ #Install git if not installed
+if git --verion returns NOTHING 
+    UPDATE APT
+    INSTALL GIT
+fi
 # Clones the repository
 [ -d "$HOME/bash-docker-server" ] || git clone https://github.com/mtv47/bash-docker-server.git $HOME/bash-docker-server
 
